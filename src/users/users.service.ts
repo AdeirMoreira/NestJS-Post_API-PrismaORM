@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { NotFoundError } from 'src/commom/errors/types/NotFoundError';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { UserRepository } from './repositories/users.repository';
@@ -15,8 +16,12 @@ export class UsersService {
         return this.usersRepository.findAll();
     }
 
-    findOne(id: number) {
-        return this.usersRepository.findOne(id);
+    async findOne(id: number) {
+        const user = await this.usersRepository.findOne(id);
+        if (!user) {
+            throw new NotFoundError('Usuário não encontrado');
+        }
+        return user;
     }
 
     update(id: number, updateUserDto: UpdateUserDto) {
