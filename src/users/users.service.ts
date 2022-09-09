@@ -19,16 +19,18 @@ export class UsersService {
     async findOne(id: number) {
         const user = await this.usersRepository.findOne(id);
         if (!user) {
-            throw new NotFoundError('Usuário não encontrado');
+            throw new NotFoundError('User Not Found');
         }
         return user;
     }
 
-    update(id: number, updateUserDto: UpdateUserDto) {
+    async update(id: number, updateUserDto: UpdateUserDto) {
+        await this.findOne(id);
         return this.usersRepository.update(id, updateUserDto);
     }
 
-    remove(id: number) {
+    async remove(id: number) {
+        await this.findOne(id);
         return this.usersRepository.remove(id);
     }
 }
