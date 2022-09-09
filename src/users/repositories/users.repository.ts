@@ -9,18 +9,33 @@ export class UserRepository {
     constructor(private readonly prismaService: PrismaService) {}
 
     async create(createUserDto: CreateUserDto): Promise<UserEntity> {
-        return this.prismaService.user.create({
-            data: createUserDto,
-        });
+        return this.prismaService.user.create({ data: createUserDto });
     }
 
     async findAll(): Promise<UserEntity[]> {
-        return this.prismaService.user.findMany();
+        return this.prismaService.user.findMany({
+            include: {
+                post: {
+                    select: {
+                        title: true,
+                        createdAt: true,
+                    },
+                },
+            },
+        });
     }
 
     async findOne(id: number): Promise<UserEntity> {
         return this.prismaService.user.findUnique({
             where: { id },
+            include: {
+                post: {
+                    select: {
+                        title: true,
+                        createdAt: true,
+                    },
+                },
+            },
         });
     }
 
@@ -31,12 +46,18 @@ export class UserRepository {
         return this.prismaService.user.update({
             where: { id },
             data: updateUserDto,
+            include: {
+                post: {
+                    select: {
+                        title: true,
+                        createdAt: true,
+                    },
+                },
+            },
         });
     }
 
     async remove(id: number): Promise<UserEntity> {
-        return this.prismaService.user.delete({
-            where: { id },
-        });
+        return this.prismaService.user.delete({ where: { id } });
     }
 }
