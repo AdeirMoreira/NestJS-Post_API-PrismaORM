@@ -2,72 +2,56 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# API de Posts Com Prisma 📝
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
+Essa API foi desenvolvida com a finaliade de praticar o framework [NESTJS](https://nestjs.com/), o ORM [PRISMA](https://www.prisma.io/docs/getting-started), o banco de dados [PostgreSQL](https://www.postgresql.org/) e o [Docker](https://docs.docker.com/)..<br> 
+Trata-se de  uma API para cadastrar um post e seu autor.  
+
+## Status 🚧🔨
+
+- em construção
+
+## Tecnologias e Técnicas 🛠
+- [NodeJS](https://nodejs.org/pt-br/)
+- [NestJS](https://nestjs.com/)
+- [Prisma](https://www.prisma.io/docs/getting-started)
+- [PostgreSQL](https://www.postgresql.org/)
+- POO
+- S-O-L-I-D
+- Conteinerização com Docker
+
+## ✔️ Features
+
+- [x] Cadastro de Posts e Autores
+- [x] Validação dos dados enviados nas requisições
+- [x] Cadastro, consulta, edição e remoção dos Posts
+
+## Modelagem do banco de dados 🎲
+
+O banco de dadas é modelado com 2 entidades: Post e User(Autor), cada uma tem sua respectiva tabela.
+
+## Rodar e testar o case com o Docker 🐳
+
+Caso tenha o docker em sua maquina, dê o sequinte comando, o servidor rodará na porta 3000.
+
+Para iniciar o servidor
+```
+docker compose up
+```
+Para iniciar o Prisma Studio
+```
+docker compose exec app bash
+npx prisma studio
+```
+Prisma Studio estará disponivel em http://localhost:5555/
+
+Após iniciar o servidor, é possivel testar todos os endpoints no arquivo api.http no qual estão configurados e prontos para uso, bastando substituir os ids nas requisições quando necessario. O arquivo se encotra na raiz do projeto. 
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/98994187/190247244-892d46d4-011c-421a-9518-f9bb015bc784.png" width="400" height="400" alt="Nest Logo" />
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
-
-```bash
-$ npm install
-```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+<h2 id="desenvolvedores">👨‍💻 Desenvolvedores</h2>
+<table>         
+<td><a href="https://github.com/future4code/silveira-Adeir-Maia"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/98994187?v=4" width="100px;" alt="Imagem profile Adeir Moreira desenvolvedor"/><br /><sub><b>Adeir Moreira</b></sub></a><br />   
+</table>
