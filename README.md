@@ -4,7 +4,7 @@
 
 # API de Posts Com Prisma 📝
 
-Essa API foi desenvolvida com a finaliade de praticar o framework [NESTJS](https://nestjs.com/), o ORM [PRISMA](https://www.prisma.io/docs/getting-started), o banco de dados [PostgreSQL](https://www.postgresql.org/) e o [Docker](https://docs.docker.com/)..<br> 
+Essa API foi desenvolvida com a finalidade de praticar o framework [NESTJS](https://nestjs.com/), o ORM [PRISMA](https://www.prisma.io/docs/getting-started), o banco de dados [PostgreSQL](https://www.postgresql.org/) e o [Docker](https://docs.docker.com/)..<br> 
 Trata-se de  uma API para cadastrar um post e seu autor.  
 
 ## Status 🚧🔨
